@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.xinwenDao">
+<!-- parameterType就是你接受的参数的类型，  -->
+
+ <!-- 查询新闻信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        xinwen
+        where 1=1
+        <if test=" null != bt and bt!=''" >
+        and bt like concat(concat('%',#{bt}),'%')
+        </if>
+        <if test=" null != nr and nr!=''" >
+        and nr like concat(concat('%',#{nr}),'%')
+        </if>
+        <if test=" null != fbsj and fbsj!=''" >
+        and fbsj like concat(concat('%',#{fbsj}),'%')
+        </if>
+    </select>
+
+
+    <!-- 根据id查询新闻信息 -->
+    <select id="getxinwenByID" resultType="com.model.xinwen">
+        SELECT
+        *
+        FROM
+        xinwen
+        WHERE
+        xwid=#{xwid}
+    </select>
+
+    <!--添加新闻信息 -->
+    <insert id="add" parameterType="com.model.xinwen">
+       
+      INSERT INTO  xinwen(bt,nr,fbsj)  values(#{bt},#{nr},#{fbsj})
+    </insert>
+
+    <!-- 改新闻信息 -->
+    <update id="update" parameterType="com.model.xinwen">
+        update xinwen set bt=#{bt},nr=#{nr},fbsj=#{fbsj} where xwid=#{xwid} 
+         
+    </update>
+
+    <!-- 删新闻信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       xinwen
+        WHERE
+        xwid=#{xwid}
+    </delete>
+
+
+
+
+</mapper>

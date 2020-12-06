@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.wupinDao">
+<!-- parameterType就是你接受的参数的类型，  -->
+
+ <!-- 查询物品信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        wupin
+        where 1=1
+        <if test=" null != wp and wp!=''" >
+        and wp like concat(concat('%',#{wp}),'%')
+        </if>
+        <if test=" null != sm and sm!=''" >
+        and sm like concat(concat('%',#{sm}),'%')
+        </if>
+        <if test=" null != sl and sl!=''" >
+        and sl like concat(concat('%',#{sl}),'%')
+        </if>
+        <if test=" null != cj and cj!=''" >
+        and cj like concat(concat('%',#{cj}),'%')
+        </if>
+        <if test=" null != gg and gg!=''" >
+        and gg like concat(concat('%',#{gg}),'%')
+        </if>
+    </select>
+
+
+    <!-- 根据id查询物品信息 -->
+    <select id="getwupinByID" resultType="com.model.wupin">
+        SELECT
+        *
+        FROM
+        wupin
+        WHERE
+        wpid=#{wpid}
+    </select>
+
+    <!--添加物品信息 -->
+    <insert id="add" parameterType="com.model.wupin">
+       
+      INSERT INTO  wupin(wp,sm,sl,cj,gg)  values(#{wp},#{sm},#{sl},#{cj},#{gg})
+    </insert>
+
+    <!-- 改物品信息 -->
+    <update id="update" parameterType="com.model.wupin">
+        update wupin set wp=#{wp},sm=#{sm},sl=#{sl},cj=#{cj},gg=#{gg} where wpid=#{wpid} 
+         
+    </update>
+
+    <!-- 删物品信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       wupin
+        WHERE
+        wpid=#{wpid}
+    </delete>
+
+
+    <!--查看是否有重复物品-->
+    <select id="noRepeat" parameterType="java.lang.String" resultType="java.util.Map">
+        SELECT * FROM
+        wupin
+        WHERE
+        wp=#{wp}
+    </select>
+
+</mapper>

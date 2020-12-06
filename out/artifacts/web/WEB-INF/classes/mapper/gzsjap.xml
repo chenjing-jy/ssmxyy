@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.gzsjapDao">
+<!-- parameterType就是你接受的参数的类型，  -->
+
+ <!-- 查询工作时间安排信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        gzsjap
+        where 1=1
+        <if test=" null != rq and rq!=''" >
+        and rq like concat(concat('%',#{rq}),'%')
+        </if>
+        <if test=" null != yh and yh!=''" >
+        and yh=#{yh}
+        </if>
+        <if test=" null != lx and lx!=''" >
+        and lx=#{lx}
+        </if>
+    </select>
+
+
+    <!-- 根据id查询工作时间安排信息 -->
+    <select id="getgzsjapByID" resultType="com.model.gzsjap">
+        SELECT
+        *
+        FROM
+        gzsjap
+        WHERE
+        gzsjapid=#{gzsjapid}
+    </select>
+
+    <!--添加工作时间安排信息 -->
+    <insert id="add" parameterType="com.model.gzsjap">
+       
+      INSERT INTO  gzsjap(rq,yh,lx)  values(#{rq},#{yh},#{lx})
+    </insert>
+
+    <!-- 改工作时间安排信息 -->
+    <update id="update" parameterType="com.model.gzsjap">
+        update gzsjap set rq=#{rq},yh=#{yh},lx=#{lx} where gzsjapid=#{gzsjapid} 
+         
+    </update>
+
+    <!-- 删工作时间安排信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       gzsjap
+        WHERE
+        gzsjapid=#{gzsjapid}
+    </delete>
+
+
+
+
+</mapper>

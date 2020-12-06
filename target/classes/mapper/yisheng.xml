@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.yishengDao">
+<!-- parameterType就是你接受的参数的类型，  -->
+
+ <!-- 查询医生信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        yisheng
+        where 1=1
+        <if test=" null != yhm and yhm!=''" >
+        and yhm like concat(concat('%',#{yhm}),'%')
+        </if>
+        <if test=" null != mm and mm!=''" >
+        and mm like concat(concat('%',#{mm}),'%')
+        </if>
+        <if test=" null != xm and xm!=''" >
+        and xm like concat(concat('%',#{xm}),'%')
+        </if>
+        <if test=" null != lxdh and lxdh!=''" >
+        and lxdh like concat(concat('%',#{lxdh}),'%')
+        </if>
+        <if test=" null != lxdz and lxdz!=''" >
+        and lxdz like concat(concat('%',#{lxdz}),'%')
+        </if>
+        <if test=" null != ks and ks!=''" >
+        and ks like concat(concat('%',#{ks}),'%')
+        </if>
+    </select>
+
+
+    <!-- 根据id查询医生信息 -->
+    <select id="getyishengByID" resultType="com.model.yisheng">
+        SELECT
+        *
+        FROM
+        yisheng
+        WHERE
+        ysid=#{ysid}
+    </select>
+
+    <!--添加医生信息 -->
+    <insert id="add" parameterType="com.model.yisheng">
+       
+      INSERT INTO  yisheng(yhm,mm,xm,lxdh,lxdz,ks)  values(#{yhm},#{mm},#{xm},#{lxdh},#{lxdz},#{ks})
+    </insert>
+
+    <!-- 改医生信息 -->
+    <update id="update" parameterType="com.model.yisheng">
+        update yisheng set yhm=#{yhm},mm=#{mm},xm=#{xm},lxdh=#{lxdh},lxdz=#{lxdz},ks=#{ks} where ysid=#{ysid} 
+         
+    </update>
+
+    <!-- 删医生信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       yisheng
+        WHERE
+        ysid=#{ysid}
+    </delete>
+
+
+    <!--查看是否有重复账号-->
+    <select id="noRepeat" parameterType="java.lang.String" resultType="java.util.Map">
+        SELECT * FROM
+        yisheng
+        WHERE
+        yhm=#{yhm}
+    </select>
+
+</mapper>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.qingjiaDao">
+<!-- parameterType就是你接受的参数的类型，  -->
+
+ <!-- 查询请假信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        qingjia
+        where 1=1
+        <if test=" null != bt and bt!=''" >
+        and bt like concat(concat('%',#{bt}),'%')
+        </if>
+        <if test=" null != nr and nr!=''" >
+        and nr like concat(concat('%',#{nr}),'%')
+        </if>
+        <if test=" null != qjsj and qjsj!=''" >
+        and qjsj like concat(concat('%',#{qjsj}),'%')
+        </if>
+        <if test=" null != kssj and kssj!=''" >
+        and kssj like concat(concat('%',#{kssj}),'%')
+        </if>
+        <if test=" null != jssj and jssj!=''" >
+        and jssj like concat(concat('%',#{jssj}),'%')
+        </if>
+        <if test=" null != zt and zt!=''" >
+        and zt like concat(concat('%',#{zt}),'%')
+        </if>
+        <if test=" null != yh and yh!=''" >
+        and yh=#{yh}
+        </if>
+    </select>
+
+
+    <!-- 根据id查询请假信息 -->
+    <select id="getqingjiaByID" resultType="com.model.qingjia">
+        SELECT
+        *
+        FROM
+        qingjia
+        WHERE
+        qjid=#{qjid}
+    </select>
+
+    <!--添加请假信息 -->
+    <insert id="add" parameterType="com.model.qingjia">
+       
+      INSERT INTO  qingjia(bt,nr,qjsj,kssj,jssj,zt,yh)  values(#{bt},#{nr},#{qjsj},#{kssj},#{jssj},#{zt},#{yh})
+    </insert>
+
+    <!-- 改请假信息 -->
+    <update id="update" parameterType="com.model.qingjia">
+        update qingjia set bt=#{bt},nr=#{nr},qjsj=#{qjsj},kssj=#{kssj},jssj=#{jssj},zt=#{zt},yh=#{yh} where qjid=#{qjid} 
+         
+    </update>
+
+    <!-- 删请假信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       qingjia
+        WHERE
+        qjid=#{qjid}
+    </delete>
+
+
+
+
+</mapper>

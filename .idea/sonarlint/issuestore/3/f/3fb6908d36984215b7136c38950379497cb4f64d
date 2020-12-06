@@ -1,0 +1,189 @@
+
+p
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¾ªĞ©
+O
+java:S1854"8Remove this useless assignment to local variable "list".(¾ªĞ©
+S
+java:S1854;"8Remove this useless assignment to local variable "kssj".(¯¯›´şÿÿÿÿ
+>
+java:S14810"(Remove this unused "map" local variable.(ãÇéÉ
+T	java:S106µ"9Replace this use of System.out or System.err by a logger.(˜”ßÿÿÿÿÿ
+T
+java:S1854…"8Remove this useless assignment to local variable "qjsj".(î¿±·ÿÿÿÿÿ
+?
+java:S1905—")Remove this unnecessary cast to "String".(Äï™r
+n
+java:S1128"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ
+t
+java:S2293&"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
+o
+java:S2293^"YReplace the type specification in this constructor call with the diamond operator ("<>").(¾ªĞ©
+F
+java:S3740"/Provide the parametrized type for this generic.(¾ªĞ©
+E
+java:S3740^"/Provide the parametrized type for this generic.(¾ªĞ©
+M
+java:S1854¯"6Remove this useless assignment to local variable "yh".(Ö»Ş•
+D
+java:S19059")Remove this unnecessary cast to "String".(î¿±·ÿÿÿÿÿ
+?
+java:S1905z")Remove this unnecessary cast to "String".(ğÀ€«
+E
+java:S3740^"/Provide the parametrized type for this generic.(¾ªĞ©
+o
+java:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(ãÇéÉ
+?
+java:S1905b")Remove this unnecessary cast to "String".(½ºì€
+>
+java:S1481¯"'Remove this unused "yh" local variable.(Ö»Ş•
+L
+java:S1854"6Remove this useless assignment to local variable "bt".(Äï™r
+B
+java:S14817"'Remove this unused "nr" local variable.(ÿ“·Ûøÿÿÿÿ
+D
+java:S1905n")Remove this unnecessary cast to "String".(î¿±·ÿÿÿÿÿ
+@
+java:S1905ÿ")Remove this unnecessary cast to "String".(½ºì€
+E
+java:S1905‰")Remove this unnecessary cast to "String".(åÙ¼ãùÿÿÿÿ
+M
+java:S18540"7Remove this useless assignment to local variable "map".(ãÇéÉ
+M
+java:S1854"6Remove this useless assignment to local variable "yh".(Ö»Ş•
+T
+java:S1854‡"8Remove this useless assignment to local variable "kssj".(¯¯›´şÿÿÿÿ
+>
+java:S19055")Remove this unnecessary cast to "String".(Äï™r
+Q
+java:S18547"6Remove this useless assignment to local variable "nr".(ÿ“·Ûøÿÿÿÿ
+m
+java:S3776]"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(µ“óûÿÿÿÿ
+E
+java:S1905‡")Remove this unnecessary cast to "String".(¯¯›´şÿÿÿÿ
+E
+java:S1905§")Remove this unnecessary cast to "String".(åÙ¼ãùÿÿÿÿ
+K
+java:S3740"/Provide the parametrized type for this generic.(ÏºÒúÿÿÿÿ
+D
+java:S1905;")Remove this unnecessary cast to "String".(¯¯›´şÿÿÿÿ
+R
+java:S1854&"7Remove this useless assignment to local variable "map".(™ºöºıÿÿÿÿ
+@
+java:S1905‹")Remove this unnecessary cast to "String".(ğÀ€«
+D
+java:S14819")Remove this unused "qjsj" local variable.(î¿±·ÿÿÿÿÿ
+J
+java:S3740_"/Provide the parametrized type for this generic.(ÏºÒúÿÿÿÿ
+?
+java:S19053")Remove this unnecessary cast to "String".(½ºì€
+D
+java:S1481;")Remove this unused "kssj" local variable.(¯¯›´şÿÿÿÿ
+J
+java:S3740_"/Provide the parametrized type for this generic.(ÏºÒúÿÿÿÿ
+T
+java:S1854à"8Remove this useless assignment to local variable "bean".(ÏÀ‰Áøÿÿÿÿ
+E
+java:S1905›")Remove this unnecessary cast to "String".(ÿ“·Ûøÿÿÿÿ
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(š³·øÿÿÿÿÿ
+R
+java:S1854ƒ"6Remove this useless assignment to local variable "nr".(ÿ“·Ûøÿÿÿÿ
+T
+java:S1854Â"8Remove this useless assignment to local variable "bean".(ÏÀ‰Áøÿÿÿÿ
+@
+java:S1905«")Remove this unnecessary cast to "String".(ğÀ€«
+>
+java:S1481‹"'Remove this unused "zt" local variable.(ğÀ€«
+@
+java:S1905¯")Remove this unnecessary cast to "String".(Ö»Ş•
+D
+java:S1905=")Remove this unnecessary cast to "String".(åÙ¼ãùÿÿÿÿ
+D
+java:S1905r")Remove this unnecessary cast to "String".(¯¯›´şÿÿÿÿ
+E
+java:S1905ƒ")Remove this unnecessary cast to "String".(ÿ“·Ûøÿÿÿÿ
+K
+java:S18545"6Remove this useless assignment to local variable "bt".(Äï™r
+>
+java:S1905f")Remove this unnecessary cast to "String".(Äï™r
+D
+java:S1905j")Remove this unnecessary cast to "String".(ÿ“·Ûøÿÿÿÿ
+M
+java:S1854‹"6Remove this useless assignment to local variable "zt".(ğÀ€«
+<
+java:S14815"'Remove this unused "bt" local variable.(Äï™r
+L
+java:S1854A"6Remove this useless assignment to local variable "yh".(Ö»Ş•
+S
+java:S18549"8Remove this useless assignment to local variable "qjsj".(î¿±·ÿÿÿÿÿ
+F
+java:S3740"/Provide the parametrized type for this generic.(¾ªĞ©
+?
+java:S1905~")Remove this unnecessary cast to "String".(Ö»Ş•
+>
+java:S1481"'Remove this unused "yh" local variable.(Ö»Ş•
+D
+java:S1905v")Remove this unnecessary cast to "String".(åÙ¼ãùÿÿÿÿ
+L
+java:S1854?"6Remove this useless assignment to local variable "zt".(ğÀ€«
+=
+java:S1481A"'Remove this unused "yh" local variable.(Ö»Ş•
+S
+java:S1854="8Remove this useless assignment to local variable "jssj".(åÙ¼ãùÿÿÿÿ
+S	java:S106E"9Replace this use of System.out or System.err by a logger.(Û®ıúÿÿÿÿ
+E
+java:S1905…")Remove this unnecessary cast to "String".(î¿±·ÿÿÿÿÿ
+E
+java:S1481‰")Remove this unused "jssj" local variable.(åÙ¼ãùÿÿÿÿ
+T
+java:S1854‰"8Remove this useless assignment to local variable "jssj".(åÙ¼ãùÿÿÿÿ
+D
+java:S1481=")Remove this unused "jssj" local variable.(åÙ¼ãùÿÿÿÿ
+K
+java:S3740"/Provide the parametrized type for this generic.(ÏºÒúÿÿÿÿ
+?
+java:S1905A")Remove this unnecessary cast to "String".(Ö»Ş•
+?
+java:S1905?")Remove this unnecessary cast to "String".(ğÀ€«
+D
+java:S19057")Remove this unnecessary cast to "String".(ÿ“·Ûøÿÿÿÿ
+N
+java:S1854^"8Remove this useless assignment to local variable "list".(¾ªĞ©
+E
+java:S1481…")Remove this unused "qjsj" local variable.(î¿±·ÿÿÿÿÿ
+?
+java:S1905R")Remove this unnecessary cast to "String".(îÁáå
+?
+java:S14813")Remove this unused "qjid" local variable.(½ºì€
+@
+java:S1905“")Remove this unnecessary cast to "String".(½ºì€
+@
+java:S1481ÿ")Remove this unused "qjid" local variable.(½ºì€
+C
+java:S1481&"(Remove this unused "map" local variable.(™ºöºıÿÿÿÿ
+?
+java:S1905")Remove this unnecessary cast to "String".(Äï™r
+=
+java:S1481"'Remove this unused "bt" local variable.(Äï™r
+@
+java:S1905")Remove this unnecessary cast to "String".(Ö»Ş•
+N
+java:S18543"8Remove this useless assignment to local variable "qjid".(½ºì€
+T	java:S106„"9Replace this use of System.out or System.err by a logger.(˜”ßÿÿÿÿÿ
+@
+java:S1905ß")Remove this unnecessary cast to "String".(«§ğ¢
+O
+java:S1854ÿ"8Remove this useless assignment to local variable "qjid".(½ºì€
+C
+java:S1481ƒ"'Remove this unused "nr" local variable.(ÿ“·Ûøÿÿÿÿ
+=
+java:S1481?"'Remove this unused "zt" local variable.(ğÀ€«
+\
+java:S1192R"FDefine a constant instead of duplicating this literal "keyid" 3 times.(îÁáå
+@
+java:S1905Á")Remove this unnecessary cast to "String".(«§ğ¢
+E
+java:S1481‡")Remove this unused "kssj" local variable.(¯¯›´şÿÿÿÿ
+E
+java:S1905Ÿ")Remove this unnecessary cast to "String".(î¿±·ÿÿÿÿÿ
+E
+java:S1905£")Remove this unnecessary cast to "String".(¯¯›´şÿÿÿÿ

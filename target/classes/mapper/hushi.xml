@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.hushiDao">
+    <!-- parameterType就是你接受的参数的类型，  -->
+
+    <!-- 查询护士信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        hushi
+        where 1=1
+        <if test=" null != yhm and yhm!=''">
+            and yhm like concat(concat('%',#{yhm}),'%')
+        </if>
+        <if test=" null != mm and mm!=''">
+            and mm like concat(concat('%',#{mm}),'%')
+        </if>
+        <if test=" null != xm and xm!=''">
+            and xm like concat(concat('%',#{xm}),'%')
+        </if>
+        <if test=" null != lxdh and lxdh!=''">
+            and lxdh like concat(concat('%',#{lxdh}),'%')
+        </if>
+        <if test=" null != lxdz and lxdz!=''">
+            and lxdz like concat(concat('%',#{lxdz}),'%')
+        </if>
+        <if test=" null != ks and ks!=''">
+            and ks like concat(concat('%',#{ks}),'%')
+        </if>
+    </select>
+
+
+    <!-- 根据id查询护士信息 -->
+    <select id="gethushiByID" resultType="com.model.hushi">
+        SELECT
+        *
+        FROM
+        hushi
+        WHERE
+        hsid=#{hsid}
+    </select>
+
+    <!--添加护士信息 -->
+    <insert id="add" parameterType="com.model.hushi">
+       
+      INSERT INTO  hushi(yhm,mm,xm,lxdh,lxdz,ks)  values(#{yhm},#{mm},#{xm},#{lxdh},#{lxdz},#{ks})
+    </insert>
+
+    <!-- 改护士信息 -->
+    <update id="update" parameterType="com.model.hushi">
+        update hushi set yhm=#{yhm},mm=#{mm},xm=#{xm},lxdh=#{lxdh},lxdz=#{lxdz},ks=#{ks} where hsid=#{hsid} 
+         
+    </update>
+
+    <!-- 删护士信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       hushi
+        WHERE
+        hsid=#{hsid}
+    </delete>
+
+
+    <!--查看是否有重复账号-->
+    <select id="noRepeat" parameterType="java.lang.String" resultType="java.util.Map">
+        SELECT * FROM
+        hushi
+        WHERE
+        yhm=#{yhm}
+    </select>
+
+</mapper>

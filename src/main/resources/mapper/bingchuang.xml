@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.bingchuangDao">
+<!-- parameterType就是你接受的参数的类型，  -->
+
+ <!-- 查询病床信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        bingchuang
+        where 1=1
+        <if test=" null != bc and bc!=''" >
+        and bc like concat(concat('%',#{bc}),'%')
+        </if>
+        <if test=" null != zt and zt!=''" >
+        and zt like concat(concat('%',#{zt}),'%')
+        </if>
+        <if test=" null != sm and sm!=''" >
+        and sm like concat(concat('%',#{sm}),'%')
+        </if>
+    </select>
+
+
+    <!-- 根据id查询病床信息 -->
+    <select id="getbingchuangByID" resultType="com.model.bingchuang">
+        SELECT
+        *
+        FROM
+        bingchuang
+        WHERE
+        bcid=#{bcid}
+    </select>
+
+    <!--添加病床信息 -->
+    <insert id="add" parameterType="com.model.bingchuang">
+       
+      INSERT INTO  bingchuang(bc,zt,sm)  values(#{bc},#{zt},#{sm})
+    </insert>
+
+    <!-- 改病床信息 -->
+    <update id="update" parameterType="com.model.bingchuang">
+        update bingchuang set bc=#{bc},zt=#{zt},sm=#{sm} where bcid=#{bcid} 
+         
+    </update>
+
+    <!-- 删病床信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       bingchuang
+        WHERE
+        bcid=#{bcid}
+    </delete>
+
+    <!--查看是否有重复病床-->
+    <select id="noRepeat" parameterType="java.lang.String" resultType="java.util.Map">
+        SELECT * FROM
+        bingchuang
+        WHERE
+        bc=#{bc}
+    </select>
+
+</mapper>

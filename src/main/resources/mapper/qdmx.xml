@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.qdmxDao">
+<!-- parameterType就是你接受的参数的类型，  -->
+
+ <!-- 查询清单明细信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        qdmx
+        where 1=1
+        <if test=" null != qd and qd!=''" >
+        and qd like concat(concat('%',#{qd}),'%')
+        </if>
+        <if test=" null != lx and lx!=''" >
+        and lx like concat(concat('%',#{lx}),'%')
+        </if>
+        <if test=" null != sm and sm!=''" >
+        and sm like concat(concat('%',#{sm}),'%')
+        </if>
+        <if test=" null != sl and sl!=''" >
+        and sl like concat(concat('%',#{sl}),'%')
+        </if>
+        <if test=" null != yf and yf!=''" >
+        and yf like concat(concat('%',#{yf}),'%')
+        </if>
+        <if test=" null != djsj and djsj!=''" >
+        and djsj like concat(concat('%',#{djsj}),'%')
+        </if>
+    </select>
+
+
+    <!-- 根据id查询清单明细信息 -->
+    <select id="getqdmxByID" resultType="com.model.qdmx">
+        SELECT
+        *
+        FROM
+        qdmx
+        WHERE
+        qdmxid=#{qdmxid}
+    </select>
+
+    <!--添加清单明细信息 -->
+    <insert id="add" parameterType="com.model.qdmx">
+       
+      INSERT INTO  qdmx(qd,lx,sm,sl,yf,djsj)  values(#{qd},#{lx},#{sm},#{sl},#{yf},#{djsj})
+    </insert>
+
+    <!-- 改清单明细信息 -->
+    <update id="update" parameterType="com.model.qdmx">
+        update qdmx set qd=#{qd},lx=#{lx},sm=#{sm},sl=#{sl},yf=#{yf},djsj=#{djsj} where qdmxid=#{qdmxid} 
+         
+    </update>
+
+    <!-- 删清单明细信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       qdmx
+        WHERE
+        qdmxid=#{qdmxid}
+    </delete>
+
+
+    <delete id="deletedh" parameterType="java.lang.String">
+        delete  from
+        qdmx
+        where
+        qd=#{dh}
+    </delete>
+
+</mapper>

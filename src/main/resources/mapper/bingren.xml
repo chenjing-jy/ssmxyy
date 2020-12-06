@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 这里填写对应的Dao文件所在的路径 -->
+<mapper namespace="com.dao.bingrenDao">
+<!-- parameterType就是你接受的参数的类型，  -->
+
+ <!-- 查询病人信息    -->
+    <select id="getAll" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+        *
+        FROM
+        bingren
+        where 1=1
+        <if test=" null != xm and xm!=''" >
+        and xm like concat(concat('%',#{xm}),'%')
+        </if>
+        <if test=" null != nl and nl!=''" >
+        and nl like concat(concat('%',#{nl}),'%')
+        </if>
+        <if test=" null != xb and xb!=''" >
+        and xb like concat(concat('%',#{xb}),'%')
+        </if>
+        <if test=" null != sm and sm!=''" >
+        and sm like concat(concat('%',#{sm}),'%')
+        </if>
+        <if test=" null != djsj and djsj!=''" >
+        and djsj like concat(concat('%',#{djsj}),'%')
+        </if>
+        <if test=" null != xy and xy!=''" >
+        and xy like concat(concat('%',#{xy}),'%')
+        </if>
+    </select>
+
+
+    <!-- 根据id查询病人信息 -->
+    <select id="getbingrenByID" resultType="com.model.bingren">
+        SELECT
+        *
+        FROM
+        bingren
+        WHERE
+        brid=#{brid}
+    </select>
+
+    <!-- 根据姓名查询病人信息 -->
+    <select id="getbingrenByXm" resultType="com.model.bingren">
+        SELECT
+        *
+        FROM
+        bingren
+        WHERE
+        xm=#{xm}
+    </select>
+
+    <!--添加病人信息 -->
+    <insert id="add" parameterType="com.model.bingren">
+       
+      INSERT INTO  bingren(xm,nl,xb,sm,djsj,xy)  values(#{xm},#{nl},#{xb},#{sm},#{djsj},#{xy})
+    </insert>
+
+    <!-- 改病人信息 -->
+    <update id="update" parameterType="com.model.bingren">
+        update bingren set xm=#{xm},nl=#{nl},xb=#{xb},sm=#{sm},djsj=#{djsj},xy=#{xy} where brid=#{brid}
+         
+    </update>
+
+    <!-- 删病人信息 -->
+    <delete id="delete" parameterType="int">
+        DELETE FROM
+       bingren
+        WHERE
+        brid=#{brid}
+    </delete>
+
+    <select id="selectByxm" parameterType="int" resultType="java.lang.String">
+        select xm from bingren where brid=#{brid}
+    </select>
+
+    <select id="selectxmByid" parameterType="int" resultType="java.lang.String">
+        select xm from bingren where brid=#{brid}
+    </select>
+
+
+    <!--查询是否重名-->
+    <select id="noXMRepeat" parameterType="java.lang.String" resultType="java.util.Map">
+        select * from bingren where xm=#{xm}
+    </select>
+
+
+</mapper>

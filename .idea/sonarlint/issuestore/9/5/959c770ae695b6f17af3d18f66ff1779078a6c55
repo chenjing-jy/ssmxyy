@@ -1,0 +1,45 @@
+
+T	Web:S5254	"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(€÷ğ=
+NWeb:TableWithoutCaptionCheckŸ" Add a description to this table.(ù©ÔŠıÿÿÿÿ
+@	Web:S5256Ÿ"%Add "<th>" headers to this "<table>".(ù©ÔŠıÿÿÿÿ
+D	Web:S1827Ÿ")Remove this deprecated "width" attribute.(ù©ÔŠıÿÿÿÿ
+D	Web:S1827Ÿ")Remove this deprecated "align" attribute.(ù©ÔŠıÿÿÿÿ
+J	Web:S1827Ÿ"/Remove this deprecated "cellpadding" attribute.(ù©ÔŠıÿÿÿÿ
+J	Web:S1827Ÿ"/Remove this deprecated "cellspacing" attribute.(ù©ÔŠıÿÿÿÿ
+@	Web:S1827¡"*Remove this deprecated "height" attribute.(¢Ï·¤
+?	Web:S1827¡")Remove this deprecated "align" attribute.(¢Ï·¤
+@	Web:S1827¡"*Remove this deprecated "valign" attribute.(¢Ï·¤
+NWeb:TableWithoutCaptionCheck¢" Add a description to this table.(…—´Âıÿÿÿÿ
+@	Web:S5256¢"%Add "<th>" headers to this "<table>".(…—´Âıÿÿÿÿ
+D	Web:S1827¢")Remove this deprecated "width" attribute.(…—´Âıÿÿÿÿ
+J	Web:S1827¢"/Remove this deprecated "cellpadding" attribute.(…—´Âıÿÿÿÿ
+J	Web:S1827¢"/Remove this deprecated "cellspacing" attribute.(…—´Âıÿÿÿÿ
+D	Web:S1827¤")Remove this deprecated "align" attribute.(—¨Å˜ÿÿÿÿÿ
+E	Web:S1827¤"*Remove this deprecated "valign" attribute.(—¨Å˜ÿÿÿÿÿ
+WWeb:UnsupportedTagsInHtml5Check¤"&Remove this deprecated "font" element.(—¨Å˜ÿÿÿÿÿ
+MWeb:BoldAndItalicTagsCheck¤"!Replace this <b> tag by <strong>.(—¨Å˜ÿÿÿÿÿ
+NWeb:TableWithoutCaptionCheckÒ" Add a description to this table.(ùğÛûÿÿÿÿ
+J	Web:S1827Ò"/Remove this deprecated "cellSpacing" attribute.(ùğÛûÿÿÿÿ
+J	Web:S1827Ò"/Remove this deprecated "cellPadding" attribute.(ùğÛûÿÿÿÿ
+D	Web:S1827Ò")Remove this deprecated "width" attribute.(ùğÛûÿÿÿÿ
+D	Web:S1827Ò")Remove this deprecated "align" attribute.(ùğÛûÿÿÿÿ
+J	Web:S1827Ò"/Remove this deprecated "bordercolor" attribute.(ùğÛûÿÿÿÿ
+?	Web:S1827Õ")Remove this deprecated "align" attribute.(Êß‡ƒ
+A	Web:S1827Õ"+Remove this deprecated "bgcolor" attribute.(Êß‡ƒ
+D	Web:S1827Ø")Remove this deprecated "width" attribute.(§ñœêıÿÿÿÿ
+E	Web:S1827Ø"*Remove this deprecated "height" attribute.(§ñœêıÿÿÿÿ
+D	Web:S1827Ú")Remove this deprecated "width" attribute.(ÀİÎ»şÿÿÿÿ
+E	Web:S1827Ú"*Remove this deprecated "height" attribute.(ÀİÎ»şÿÿÿÿ
+D	Web:S1827Ü")Remove this deprecated "width" attribute.(Ë×“àşÿÿÿÿ
+E	Web:S1827Ü"*Remove this deprecated "height" attribute.(Ë×“àşÿÿÿÿ
+m Web:TableHeaderHasIdOrScopeCheckŞ";Add either an 'id' or a 'scope' attribute to this <th> tag.(ıÀ¶Ûûÿÿÿÿ
+D	Web:S1827ã")Remove this deprecated "align" attribute.( ÷âõøÿÿÿÿ
+F	Web:S1827ã"+Remove this deprecated "bgcolor" attribute.( ÷âõøÿÿÿÿ
+?	Web:S1827å")Remove this deprecated "align" attribute.(Ã¹ô
+@	Web:S1827å"*Remove this deprecated "height" attribute.(Ã¹ô
+D	Web:S1827ç")Remove this deprecated "align" attribute.(»ÊÙßüÿÿÿÿ
+E	Web:S1827ç"*Remove this deprecated "height" attribute.(»ÊÙßüÿÿÿÿ
+>	Web:S1827è")Remove this deprecated "align" attribute.(üÓ
+?	Web:S1827è"*Remove this deprecated "height" attribute.(üÓ
+?	Web:S1827é")Remove this deprecated "align" attribute.(ÀÕ‡Î
+@	Web:S1827é"*Remove this deprecated "height" attribute.(ÀÕ‡Î
