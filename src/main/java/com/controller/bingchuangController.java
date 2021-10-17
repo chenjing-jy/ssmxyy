@@ -125,6 +125,7 @@ public class bingchuangController {
         if (bc != null && !bc.equals("")) {
             map1.put("bc", bc);//病床
         }
+        // 1
         String zt = (String) request.getParameter("zt");//状态
         if (zt != null && !zt.equals("")) {
             map1.put("zt", zt);//状态
